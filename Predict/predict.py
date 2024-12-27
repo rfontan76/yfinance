@@ -108,8 +108,17 @@ st.write(data_frame)
 # SET Display daily quote
 st.subheader("Current price:")
 st.write(get_stock_price(selected_stocks))
+
+# Display MEAN
+st.subheader("Mean Predicted price:")
+trend_ = predicted_quote_trend[0]
+low_ = predicted_quote_yhat_low[0]
+high_ = predicted_quote_yhat_high[0]
+mean = (trend_+high_+low_) / 3
+st.write(round(mean, 2))
+
 # SET Display daily predicted trend
-st.subheader("Predicted Trend for today:")
+st.subheader("Predicted Trend | Low and High for today:")
 st.write(predicted_quote_trend)
 st.write(predicted_quote_yhat_low)
 st.write(predicted_quote_yhat_high)
