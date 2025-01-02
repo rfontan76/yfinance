@@ -46,7 +46,7 @@ TODAY = date.today()
 YESTERDAY = date.today() + timedelta(days=- 1)
 
 # SET Stocks Selector
-stocks = ("SPY", "AAPL", "GOOG", "NVDA", "TSLA", "YPF")
+stocks = ("SPY", "AAPL", "GOOG", "NVDA", "TSLA", "YPF", "VST")
 selected_stocks = st.selectbox("Select symbol for prediction", stocks)
 
 # SET Display stock quote
